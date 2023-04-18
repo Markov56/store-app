@@ -1,0 +1,270 @@
+body {
+  min-height: 100vh;
+}
+
+.content {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #000;
+  padding: 12px 0 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .left {
+  color: #ffb800;
+  padding-right: 10px;
+}
+
+.header .right {
+  color: #fff;
+  border-left: 1px solid white;
+  padding-left: 12px;
+}
+
+.main {
+  min-height: calc(100vh - 86px);
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.heading {
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 42px;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.cards-list {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 360px;
+  background-color: #f3f5f6;
+  position: relative;
+}
+
+.price {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 240px;
+  height: 100px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bebas Neue";
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.period {
+  margin-top: 10px;
+}
+
+.best-value {
+  position: absolute;
+  padding: 4px 0;
+  width: 80px;
+  color: black;
+  background-color: #ffb800;
+  text-align: center;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.discount-wrapper {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+
+.percentage {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-45deg);
+}
+
+.title-wrapper {
+  font-family: "Roboto";
+  text-align: center;
+  margin-top: 72px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.license {
+  font-weight: 700;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+.download {
+  font-family: "Roboto";
+  background: linear-gradient(
+    0deg,
+    #130999 -0.01%,
+    #174d8f 35.01%,
+    #1a7f87 64.91%,
+    #1c9e83 87.44%,
+    #1daa81 99.99%
+  );
+  text-transform: uppercase;
+  color: #fff;
+  height: 50px;
+  border-radius: 200px;
+  padding-left: 20px;
+  padding-right: 60px;
+  margin-top: 32px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.download::after {
+  content: url(images/download.svg);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-left: 10px;
+}
+
+.download:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.open-file {
+  position: fixed;
+  background-color: #3683f7;
+  color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  padding: 10px 15px 10px;
+  text-align: center;
+  width: 160px;
+  animation: slideIn 0.5s ease-in-out forwards;
+  display: none;
+}
+
+.open-file::after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.open-file p {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+}
+
+.footer {
+  background-color: #000;
+  padding: 8px 0 10px;
+  margin-bottom: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.top-antivirus {
+  color: #ffb800;
+  text-transform: uppercase;
+}
+
+.copyright {
+  color: #fff;
+}
+
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  .open-file {
+    bottom: 110px;
+    left: 20px;
+  }
+
+  .open-file::after {
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-top: 60px solid #3683f7;
+    bottom: -60px;
+    left: 0;
+  }
+}
+
+@-moz-document url-prefix() {
+  .open-file {
+    top: 96px;
+    right: 15px;
+    bottom: auto;
+    left: auto;
+  }
+
+  .open-file::after {
+    top: -60px;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    border-bottom: 60px solid #3683f7;
+    border-top: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 22px;
+  }
+
+  .cards-list {
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
